@@ -1,0 +1,6 @@
+// === Cargo.toml Dependencies ===
+// [dependencies]
+// solana-program = "1.18.4" # Or latest compatible version
+// spl-token = { version = "4.0.1", features = ["no-entrypoint"] } # SPL Token library
+// borsh = "1.4.0" # For serialization/deserialization
+// thiserror = "1.0.58"

@@ -40,3 +40,5 @@ Mainnet - https://api.mainnet-beta.solana.com (production)
 Devnet - https://api.devnet.solana.com (developer experimentation)
 Testnet - https://api.testnet.solana.com (validator testing)
 Learn more about Clusters and Endpoints here.
+
+https://x.com/marc_louvion/status/1910312329172189543 inspiration

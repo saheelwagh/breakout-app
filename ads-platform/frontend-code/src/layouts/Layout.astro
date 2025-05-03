@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string; // Optional description meta tag
+}
+const { title, description = 'Your Advertising Marketplace' } = Astro.props;
+
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> {/* Ensure initial-scale=1.0 is present */}
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		{/* Add font links here if desired, e.g., Google Fonts */}
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<style is:global> /* Use is:global for global body styles */
+			body {
+				font-family: 'Inter', sans-serif; /* Example font */
+				/* Add any other global base styles here */
+			}
+		</style>
+	</head>
+	<body class="bg-white text-gray-800 antialiased"> {/* Base body styles */}
+		{/* Slot for page content */}
+		<slot />
+	</body>
+</html>
+
