@@ -1,0 +1,69 @@
+---
+// List of 12 ad mediums
+// TODO: Load Mediums from a database or API in the future
+// TODO: Create a page for listing an ad space.  In that load a dropdown with these mediums from the database or API
+
+const adMediums = [
+  "Newspaper",
+  "Magazines",
+  "Television",
+  "Radio",
+  "Digital - Search (SEM)",
+  "Digital - Social Media",
+  "Digital - Display Banners",
+  "Digital - Video Ads",
+  "Outdoor - Billboards",
+  "Outdoor - Transit",
+  "Cinema",
+  "In-App Mobile",
+];
+---
+{/*
+  This component displays a grid of advertising mediums.
+  The grid is responsive, adjusting the number of columns based on screen size.
+*/}
+
+{/*
+  **Explanation of the Code:**
+  
+  1. **Grid Layout**: The grid is set up to have 1 column on mobile devices, 2 columns on medium devices (like tablets), and 4 columns on large devices (like desktops).
+  
+  2. **Styling**: Each grid item has a light gray background, padding, rounded corners, and a shadow effect that changes on hover.
+  
+  3. **Text**: The text is centered and styled for readability.
+*/}
+---
+{/*
+  **Styling Classes Explained:**
+  
+  - `bg-gray-100`: Light gray background for the grid items.
+  - `p-6`: Padding around the grid items.
+  - `rounded-lg`: Rounded corners for the grid items.
+  - `shadow-sm`: Small shadow effect for depth.
+  - `text-center`: Centered text within each grid item.
+  - `hover:shadow-md`: Increases shadow on hover for a subtle effect.
+  - `transition-shadow duration-200`: Smooth transition effect for the shadow change.
+*/}
+---
+{/*
+  **Responsive Design**: The grid layout is responsive, meaning it will adapt to different screen sizes. 
+  - On mobile devices, it shows 1 column.
+  - On medium devices (like tablets), it switches to 2 columns.
+  - On large devices (like desktops), it displays 4 columns.
+*/}
+---
+
+<section class="py-12">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Explore Advertising Mediums</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {adMediums.map((medium) => (
+        // Wrap the div with an anchor tag
+        <a href="#" class="block rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          {/* Apply background, padding etc. to the inner div */}
+          <div class="bg-gray-100 p-6 h-full flex items-center justify-center rounded-lg"> {/* Added h-full and flex centering for consistent height/alignment */}
+            <h3 class="text-lg font-medium text-gray-700 text-center">{medium}</h3> {/* Ensured text-center */}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>

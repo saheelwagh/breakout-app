@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro'; 
+import Navbar from '../../components/Navbar.astro'; 
+
+const placeholderImage = (text = 'Placeholder', width = 800, height = 400, bgColor = 'e2e8f0', textColor = '64748b') => {
+  return `https://placehold.co/${width}x${height}/${bgColor}/${textColor}?text=${encodeURIComponent(text)}`;
+}
+---
+
+<Layout title="Outdoor Advertising - AdMarketplace">
+  <Navbar />
+
+  <main class="container mx-auto px-4 py-8">
+
+    {/* Breadcrumbs Placeholder */}
+    <nav class="text-sm text-gray-500 mb-4" aria-label="Breadcrumb">
+      <ol class="list-none p-0 inline-flex">
+        <li class="flex items-center">
+          <a href="/" class="hover:text-indigo-600">Home</a>
+          <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+        </li>
+        <li>
+          <span class="text-gray-700">Outdoor Advertising</span>
+        </li>
+      </ol>
+    </nav>
+
+    {/* Main Title */}
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Outdoor Advertising</h1>
+
+    {/* Introductory Paragraph */}
+    <p class="text-gray-700 leading-relaxed mb-8">
+      Outdoor advertising, also known as Out-Of-Home (OOH) advertising, refers to any visual advertising media found outside of the home. This includes billboards, bus shelters, benches, transit advertising (on buses, taxis, subways), street furniture, airport displays, stadium signage, and more. It's one of the oldest forms of advertising and remains highly effective for reaching a broad audience, building brand awareness, and targeting specific geographic locations.
+    </p>
+
+    {/* Image Gallery Placeholder (Static Grid) */}
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <img src={placeholderImage('Billboard Example', 600, 400)} alt="Billboard Example" class="rounded-lg shadow-md object-cover w-full h-48 md:h-64" />
+        <img src={placeholderImage('Bus Shelter Ad', 600, 400)} alt="Bus Shelter Ad" class="rounded-lg shadow-md object-cover w-full h-48 md:h-64" />
+        <img src={placeholderImage('Transit Ad', 600, 400)} alt="Transit Ad" class="rounded-lg shadow-md object-cover w-full h-48 md:h-64" />
+        <img src={placeholderImage('Mall Advertising', 600, 400)} alt="Mall Advertising" class="rounded-lg shadow-md object-cover w-full h-48 md:h-64" />
+        <img src={placeholderImage('Airport Ad', 600, 400)} alt="Airport Ad" class="rounded-lg shadow-md object-cover w-full h-48 md:h-64" />
+        <img src={placeholderImage('Street Furniture', 600, 400)} alt="Street Furniture Ad" class="rounded-lg shadow-md object-cover w-full h-48 md:h-64" />
+      </div>
+    </section>
+
+    {/* Content Sections */}
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      {/* Main Content Area */}
+      <div class="lg:col-span-2 space-y-10">
+
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2">Outdoor Advertising Options</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            There is a wide variety of OOH media available, catering to different budgets, target audiences, and campaign goals. Some common options include:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li><strong>Billboards:</strong> Large format displays along highways and busy roads (Traditional, Digital - DOOH).</li>
+            <li><strong>Street Furniture:</strong> Ads on bus shelters, kiosks, benches, phone booths.</li>
+            <li><strong>Transit Advertising:</strong> Ads placed on buses, trains, taxis, subway stations, and airports.</li>
+            <li><strong>Place-Based Media:</strong> Ads in specific locations like malls, gyms, stadiums, cinemas, bars, and restaurants.</li>
+            <li><strong>Ambient Media:</strong> Unconventional, creative ad placements integrated into the environment.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2">Outdoor Advertising Rates</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Rates for outdoor advertising vary significantly based on factors like:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4 mt-2">
+            <li><strong>Location:</strong> High-traffic, prime locations command higher prices.</li>
+            <li><strong>Media Type:</strong> Billboards are generally more expensive than bus shelter ads. Digital OOH costs more than static.</li>
+            <li><strong>Size and Format:</strong> Larger formats cost more.</li>
+            <li><strong>Duration:</strong> Longer campaigns typically have lower per-day rates but higher overall cost.</li>
+            <li><strong>Impressions/Traffic Count:</strong> Estimated number of people likely to see the ad.</li>
+            <li><strong>Production Costs:</strong> Printing static vinyls or creating digital content.</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            Expect costs ranging from a few thousand rupees for smaller formats in less busy areas to lakhs or even crores for premium billboards or large-scale digital campaigns in major cities.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2">How To Advertise in Outdoor</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            The process generally involves these steps:
+          </p>
+          <ol class="list-decimal list-inside text-gray-700 space-y-2 pl-4">
+            <li><strong>Define Objectives & Budget:</strong> What do you want to achieve (awareness, direction, event promotion)? How much can you spend?</li>
+            <li><strong>Identify Target Audience & Location:</strong> Where does your audience live, work, or travel?</li>
+            <li><strong>Select Media Type & Specific Sites:</strong> Choose the formats (billboards, transit, etc.) and exact locations that best reach your audience.</li>
+            <li><strong>Design Creative:</strong> OOH ads need to be visually impactful, concise, and easily understood at a glance. Follow best practices for design (bold fonts, high contrast, clear call to action).</li>
+            <li><strong>Book Inventory:</strong> Contact media owners or agencies (like this platform!) to check availability and book the desired ad spaces.</li>
+            <li><strong>Produce & Install:</strong> Get the ad creative printed or formatted digitally and arrange for installation.</li>
+            <li><strong>Monitor & Measure (Optional):</strong> Track impact through metrics like website traffic lift, coupon codes, or brand awareness studies.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2">Advantages Of Outdoor Advertising</h2>
+           <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li><strong>High Reach & Frequency:</strong> Can expose messages to a large number of people repeatedly.</li>
+            <li><strong>Geographic Targeting:</strong> Excellent for targeting specific neighborhoods, cities, or routes.</li>
+            <li><strong>Brand Awareness:</strong> Constant visibility helps build brand recognition.</li>
+            <li><strong>Impactful Visuals:</strong> Large formats can create a strong visual impression.</li>
+            <li><strong>Cost-Effective (CPM):</strong> Often has a lower Cost Per Thousand (CPM) impressions compared to other media.</li>
+            <li><strong>Less Intrusive:</strong> Generally perceived as less interruptive than online or TV ads.</li>
+            <li><strong>Reaches Audience On-the-Go:</strong> Connects with consumers during their daily commute or activities.</li>
+          </ul>
+        </section>
+
+      </div>
+
+      {/* Sidebar Placeholder */}
+      <aside class="lg:col-span-1 space-y-6">
+        <div class="bg-indigo-50 p-6 rounded-lg border border-indigo-200">
+          <h3 class="text-xl font-semibold text-indigo-800 mb-4">Get Started</h3>
+          <p class="text-indigo-700 mb-4">Ready to launch your outdoor campaign? Contact us for a custom quote and planning assistance.</p>
+          <button class="w-full bg-indigo-600 text-white font-semibold px-4 py-3 rounded-md hover:bg-indigo-700 transition duration-200">
+            Request a Quote
+          </button>
+        </div>
+
+        <div class="bg-gray-100 p-6 rounded-lg">
+           <h3 class="text-xl font-semibold text-gray-800 mb-4">Related Mediums</h3>
+           <ul class="space-y-2">
+             <li><a href="#" class="text-indigo-600 hover:underline">Digital Advertising</a></li>
+             <li><a href="#" class="text-indigo-600 hover:underline">Radio Advertising</a></li>
+             <li><a href="#" class="text-indigo-600 hover:underline">Transit Advertising</a></li>
+             <li><a href="#" class="text-indigo-600 hover:underline">Cinema Advertising</a></li>
+           </ul>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  {/* Footer Placeholder */}
+  <footer class="bg-gray-100 mt-16 py-8 border-t border-gray-200">
+    <div class="container mx-auto px-4 text-center text-gray-600 text-sm">
+      <p>&copy; {new Date().getFullYear()} AdMarketplace Clone. All rights reserved.</p>
+      <div class="mt-2 space-x-4">
+        <a href="/privacy" class="hover:text-indigo-600">Privacy Policy</a>
+        <a href="/terms" class="hover:text-indigo-600">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</Layout>
